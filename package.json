@@ -1,0 +1,23 @@
+{
+  "name": "chatjs-call",
+  "version": "1.0.0",
+  "description": "RTC integration for ChatJs",
+  "main": "call.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ION606/chatJS-RTC.git"
+  },
+  "author": "ION606",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ION606/chatJS-RTC/issues"
+  },
+  "homepage": "https://github.com/ION606/chatJS-RTC#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-turn": "^0.0.6"
+  }
+}
