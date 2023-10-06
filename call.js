@@ -36,7 +36,9 @@ turnServer.on('error', async (err) => {
     console.log(err);
 })
 
-// Your Express.js routes and other application logic
+app.get('/call', async (req, res) => {
+    return res.sendFile('audioCall.html', {root: '.'});
+});
 
 // Start the Express.js server
 const port = process.env.PORT || 3000;

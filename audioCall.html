@@ -11,7 +11,7 @@
         function createWSPath() {
             const socketProtocol = (window.location.protocol === 'https:' ? 'wss:' : 'ws:')
             var echoSocketUrl = socketProtocol + `//${window.location.hostname}`;
-            if (window.location.port) echoSocketUrl += `:${window.location.port}`;
+            if (window.location.port) echoSocketUrl += `4000`; //window.location.port
             echoSocketUrl += '/websocket';
             return echoSocketUrl;
         }
@@ -24,7 +24,16 @@
 
             // Get access to the local camera and microphone
             try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: useVideo, audio: useAudio })
+                var stream;
+                try {
+                    stream = await navigator.mediaDevices.getUserMedia({ video: useVideo, audio: useAudio });
+                } catch (err) {
+                    if (err.message == 'TypeError: audio and/or video is required') return;
+                    console.error(err);
+                    return;
+                }
+
+
                 // Display the local video stream
                 const localVideo = document.getElementById('localVideo');
                 localVideo.srcObject = stream;
