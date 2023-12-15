@@ -1,0 +1,52 @@
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {} false
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {} false
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {
+  '5364c111-846c-4756-936f-1d4426cb36f8': {
+    name: 'Dr. Hans Abbott III',
+    fakeProfileURL: 'https://api.namefake.com/english-united-states/male/1807be48657ad32405424bb6fc860a47',
+    socketid: 'tLHsQBJndH6nuFEtAAAB'
+  }
+} true
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {
+  '5364c111-846c-4756-936f-1d4426cb36f8': {
+    name: 'Dr. Hans Abbott III',
+    fakeProfileURL: 'https://api.namefake.com/english-united-states/male/1807be48657ad32405424bb6fc860a47',
+    socketid: '8eNiW4Al5GTr649DAAAH'
+  }
+} true
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {} false
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {
+  '5364c111-846c-4756-936f-1d4426cb36f8': {
+    name: 'Rhea King',
+    fakeProfileURL: 'https://api.namefake.com/english-united-states/female/3cc490afb9fcf2dc23b4e9f2d27d141c',
+    socketid: '5jX0N9jTQSU1fpx0AAAJ'
+  }
+} true
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {
+  '5364c111-846c-4756-936f-1d4426cb36f8': {
+    name: 'Rhea King',
+    fakeProfileURL: 'https://api.namefake.com/english-united-states/female/3cc490afb9fcf2dc23b4e9f2d27d141c',
+    socketid: 'kg2zgBX-UMRTvmItAAAL'
+  }
+} true
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {
+  '5364c111-846c-4756-936f-1d4426cb36f8': {
+    name: 'Rhea King',
+    fakeProfileURL: 'https://api.namefake.com/english-united-states/female/3cc490afb9fcf2dc23b4e9f2d27d141c',
+    socketid: 'v-ghEg7KXo51MFF4AAAN'
+  }
+} true
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {
+  '5364c111-846c-4756-936f-1d4426cb36f8': {
+    name: 'Rhea King',
+    fakeProfileURL: 'https://api.namefake.com/english-united-states/female/3cc490afb9fcf2dc23b4e9f2d27d141c',
+    socketid: '-7VJYmGGa9gqXyGIAAAP'
+  }
+} true
+5364c111-846c-4756-936f-1d4426cb36f8 Map(0) {
+  '5364c111-846c-4756-936f-1d4426cb36f8': {
+    name: 'Rhea King',
+    fakeProfileURL: 'https://api.namefake.com/english-united-states/female/3cc490afb9fcf2dc23b4e9f2d27d141c',
+    socketid: '-wMP78-SBVIMemvNAAAR'
+  }
+} true
