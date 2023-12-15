@@ -5,8 +5,9 @@ const io = require('socket.io')(8000, {
 });
 
 
-async function temp() {
+function temp() {
 	try {
+		/*
 		const response = await require('axios').get('https://api.namefake.com/');
 
 		if (response.status === 200) {
@@ -19,7 +20,18 @@ async function temp() {
 			console.error('Failed to fetch data from the API.');
 			return null;
 		}
-	} catch (error) {
+		*/
+		const names = [
+			"Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah", "Isaac", "Jane",
+			"Kevin", "Linda", "Mike", "Nancy", "Oliver", "Patricia", "Quincy", "Rachel", "Sam", "Tina",
+			"Ursula", "Victor", "Wendy", "Xavier", "Yvonne", "Zane",
+			"Alex", "Beth", "Cameron", "Daisy", "Ethan", "Fiona", "George", "Holly", "Ivy", "Jack",
+			"Katie", "Leo", "Megan", "Nina", "Oscar", "Penny", "Quinn", "Riley", "Sophia", "Tyler"
+		];
+
+		return { name: names[Math.floor(Math.random() * names.length)], fakeProfileURL: "" };
+	}
+	catch (error) {
 		console.error('An error occurred:', error);
 	}
 }
@@ -35,15 +47,16 @@ io.on('connection', async (socket) => {
 
 	//TODO replace this with either the userID or the session token
 	socket.on('establishConnection', async (data) => {
-		// console.log(data.uid, users, data.uid in users)
+		console.log(data.uid, users, data.uid in users)
 
 		if (data && data.uid && data.uid in users) {
 			// maybe just ignore incoming connection intead
 			users[data.uid]['socketid'] = socket.id;
 			socketsToUsers[socket.id] = data.uid;
 		} else {
-			const uObj = await temp();
-			if (!uObj) return "RANDOM NAME GENERATOR ERROR";
+			const uObj = temp();
+			if (!uObj) return console.log("RANDOM NAME GENERATOR ERROR");
+			console.log(data.uid);
 
 			const uid = (data && data.uid) ? data.uid : uObj.uid;
 
@@ -63,7 +76,7 @@ io.on('connection', async (socket) => {
 
 		delete users[uid];
 		delete socketsToUsers[socket.id];
-		
+
 		io.sockets.emit('userDisconnected', toSend);
 	});
 
@@ -77,14 +90,14 @@ io.on('connection', async (socket) => {
 		const uConf = users[data.from];
 		const uToCall = users[data.userToCall];
 		if (!uToCall) return;
-		
+
 		io.to(uToCall['socketid']).emit('callUser', { signal: data.signalData, from: uConf });
 	});
 
 	socket.on('acceptCall', (data) => {
 		io.to(data.to).emit('callAccepted', data.signal);
 	});
-	
+
 	socket.on('connAlrExists', (data) => {
 		if (!data.socketId in users) return io.to(data.socketId).emit("RESET");
 
