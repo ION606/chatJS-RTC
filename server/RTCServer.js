@@ -38,6 +38,7 @@ io.on('connection', async (socket) => {
 		// console.log(data.uid, users, data.uid in users)
 
 		if (data && data.uid && data.uid in users) {
+			// maybe just ignore incoming connection intead
 			users[data.uid]['socketid'] = socket.id;
 			socketsToUsers[socket.id] = data.uid;
 		} else {

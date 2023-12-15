@@ -7,8 +7,8 @@ node_modules
 
 # testing
 /coverage
-server.txt
-client.txt
+serverOut.txt
+clientOut.txt
 
 # production
 /build
